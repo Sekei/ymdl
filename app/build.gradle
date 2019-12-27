@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ymdl"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        //分包
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+//    defaultConfig {
+//        jackOptions {
+//            enabled = true
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //分包
+    implementation 'com.android.support:multidex:1.0.3'
+    //json解析阿里巴巴
+    implementation 'com.alibaba:fastjson:1.2.32'
+    //添加如下代码
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+    //系统权限管理
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    //响应式框架
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    //retrofit2网络框架(RXJava+Retrofit+MVP+OKHttp)
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    //retrofit - webservice
+    compile('com.squareup.retrofit2:converter-simplexml:2.2.0') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    implementation files('libs/LPAPI-2018-08-03-R.jar')
+    //权限申请
+    implementation 'com.yanzhenjie.permission:support:2.0.1'
+    //列表库
+    implementation 'com.yanzhenjie.recyclerview:support:1.3.2'
+    //通用adapter适配器框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+}

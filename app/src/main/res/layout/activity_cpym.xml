@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_base_title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/bai_cpym" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="产品易码生成"
+        android:textColor="@color/color_ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/factory_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_frame_fff_1"
+        android:gravity="center"
+        android:hint="输入工厂名称"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textColorHint="#bbb"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/pro_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_frame_fff_1"
+        android:gravity="center"
+        android:hint="输入产品名称"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textColorHint="#bbb"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/pro_no"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_frame_fff_1"
+        android:digits="@string/alphabet_and_number"
+        android:gravity="center"
+        android:hint="输入产品编号"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textColorHint="#bbb"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/pro_num"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_frame_fff_1"
+        android:gravity="center"
+        android:hint="输入产品数量"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textColorHint="#bbb"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_frame_fff_1">
+
+        <TextView
+            android:id="@+id/pro_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:hint="请选择产品单位"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textColorHint="#bbb"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/xlcd_01" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_efb935"
+        android:gravity="center"
+        android:text="生成产品易码"
+        android:textColor="@color/color_ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

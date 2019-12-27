@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">易码当联</string>
+    <string name="btn_connect">连接打印机</string>
+    <string name="default_device_name">B11-81175833</string>
+    <string name="default_device_address">DC:0D:30:78:94:21</string>
+    <string name="default_device_status">未配对</string>
+    <string name="print_label">打印标签</string>
+    <string name="disconnect_device">断开打印机</string>
+    <string name="search_device">搜索打印机</string>
+    <string name="alphabet_and_number">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-()（）</string>
+</resources>
